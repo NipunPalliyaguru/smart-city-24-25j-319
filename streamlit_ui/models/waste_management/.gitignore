@@ -1,0 +1,8 @@
+densenet201_garbage_classifier.h5
+efficientnetb1_garbage_classifier.h5
+hybrid_resnet50_effb1_classifier_old.h5
+mobilenetv2_garbage_classifier.h5
+resnet50_garbage_classifier_old.h5
+resnet50_garbage_classifier.h5
+vgg19_garbage_classifier.h5
+xception_garbage_classifier.h5
