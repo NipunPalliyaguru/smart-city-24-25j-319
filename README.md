@@ -9,14 +9,14 @@ Urbanization has increased population density and infrastructure strain in citie
 in managing urban environments efficiently. Traditional methods of urban management struggle
 with the complexities of modern cities. Smart cities aim to address these issues by integrating
 advanced technologies to improve residents' quality of life, enhance sustainability, and optimize
-urban services. Computer vision, a rapidly evolving subset of artificial intelligence [1], offers
+urban services. Computer vision, a rapidly evolving subset of artificial intelligence, offers
 promising solutions to several urban challenges. This research project focuses on leveraging
 computer vision technology to enhance various aspects of smart city infrastructure, particularly in
 surveillance, traffic management, and waste management.
 
 Ensuring public safety is a critical problem in urban environments. Traditional surveillance systems
 require extensive human monitoring, which is prone to errors and inefficiencies. Computer vision
-can automate surveillance by providing real-time threat detection [2] and analysis, significantly
+can automate surveillance by providing real-time threat detection and analysis, significantly
 improving response times and reducing the reliance on human operators. Advanced algorithms can
 identify suspicious activities, unattended objects, and potential security threats with high accuracy,
 enhancing overall security in public spaces.
@@ -24,7 +24,7 @@ enhancing overall security in public spaces.
 Management in urban areas is often inefficient and labor-intensive, leading to environmental and
 health hazards. Computer vision can revolutionize waste management by automating the sorting
 and classification of waste materials. High-resolution cameras and advanced image recognition
-algorithms [3] can identify different types of waste, such as recyclable, organic, and hazardous
+algorithms can identify different types of waste, such as recyclable, organic, and hazardous
 materials, enabling more efficient and accurate sorting. This automation reduces the need for
 manual labor, improves recycling rates, and ensures safer disposal of hazardous materials.
 
@@ -39,7 +39,7 @@ overall traffic management. This proactive approach to incident management repre
 leap forward in creating smarter, safer road environments.
 
 Waste management in urban areas is often inefficient and labor-intensive, leading to environmental
-and health hazards. Computer vision can revolutionize waste management [4] by automating the
+and health hazards. Computer vision can revolutionize waste management by automating the
 sorting and classification of waste materials. High-resolution cameras and advanced image
 recognition algorithms can identify different types of waste, such as recyclable, organic, and
 hazardous materials, enabling more efficient and accurate sorting. This automation reduces the need
