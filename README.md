@@ -49,9 +49,9 @@ for manual labor, improves recycling rates, and ensures safer disposal of hazard
 ### Main Diagram
 
 
+![main-diagram](https://github.com/user-attachments/assets/696b1156-3d26-429b-813f-79b5d7dba38e)
 
 
-<div align="center"><img src="https://github.com/user-attachments/assets/696b1156-3d26-429b-813f-79b5d7dba38e" width="640px" align="center"> </div>
 ### Technologies used
 
 
