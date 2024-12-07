@@ -47,9 +47,10 @@ for manual labor, improves recycling rates, and ensures safer disposal of hazard
 
 ```
 ### Main Diagram
-![Main Diagram](assets/main-diagram.gif)
 
+![main-diagram](https://github.com/user-attachments/assets/696b1156-3d26-429b-813f-79b5d7dba38e)
 ### Technologies used
+
 
 ```
 🧑‍💻 To develop this application, use MERN stack and REST API
