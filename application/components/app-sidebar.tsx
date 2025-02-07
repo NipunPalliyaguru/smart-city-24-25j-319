@@ -9,6 +9,7 @@ import {
   LifeBuoy,
   PersonStanding,
   Send,
+  Settings2,
   Trash,
 } from "lucide-react";
 
@@ -23,24 +24,27 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { NavSecondary } from "./nav-secondary";
+import { UserData } from "@/app/(dashboard)/layout";
 
-const baseURL =  "dashboard"
+const baseURL = "dashboard";
 
 // This is sample data.
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   teams: [
     {
       name: "Smart City",
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
-    }
+    },
   ],
-  navMain: [
+  adminNavMain: [
+    {
+      title: "Dashboard",
+      url: `/${baseURL}`,
+      icon: LayoutDashboard,
+    },
+  ],
+  userNavMain: [
     {
       title: "Dashboard",
       url: `/${baseURL}`,
@@ -66,6 +70,11 @@ const data = {
       url: `/${baseURL}/parking-management`,
       icon: CircleParking,
     },
+    {
+      title: "Settings",
+      url: `/${baseURL}/settings`,
+      icon: Settings2,
+    },
   ],
   navSecondary: [
     {
@@ -81,18 +90,23 @@ const data = {
   ],
 };
 
-export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+export function AppSidebar({
+  user,
+  role,
+  ...props
+}: React.ComponentProps<typeof Sidebar> & { user: UserData; role: string }) {
+  const navItems = role === "ADMIN" ? data.adminNavMain : data.userNavMain
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
+        <NavMain items={navItems} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        <NavUser user={user} />
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>

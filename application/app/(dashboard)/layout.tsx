@@ -1,3 +1,4 @@
+import type React from "react"
 import { AppSidebar } from "@/components/app-sidebar";
 import {
   Breadcrumb,
@@ -13,15 +14,46 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { auth, currentUser } from "@clerk/nextjs/server";
+import { getUserRole } from "@/lib/getUserRole";
+import { redirect } from "next/navigation";
 
-export default function DashboardLayout({
+export type UserData = {
+  id: string
+  firstName: string
+  lastName: string
+  username: string
+  email: string
+  imageUrl: string
+}
+
+export default async function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const userId = await auth()
+  const user = await currentUser()
+
+  if(!userId){
+    redirect("/sign-in")
+  }
+
+  const role = await getUserRole() || "USER"
+
+  const userData: UserData = {
+    id: user?.id || "",
+    firstName: user?.firstName || "",
+    lastName: user?.lastName || "",
+    username: user?.username || "",
+    email: user?.emailAddresses[0].emailAddress || "",
+    imageUrl: user?.imageUrl || "",
+  }
+
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <AppSidebar user={userData} role={role}  />
       <SidebarInset>
         <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
@@ -47,3 +79,4 @@ export default function DashboardLayout({
     </SidebarProvider>
   );
 }
+export const dynamic = "force-dynamic"
