@@ -1,6 +1,8 @@
 const AccidentDetectionPage = () => {
     return (
-        <div>accident-detection</div>
+        <div>accident-detection
+            hjghg
+        </div>
     )
 }
 
