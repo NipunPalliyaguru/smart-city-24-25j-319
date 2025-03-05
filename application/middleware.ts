@@ -4,7 +4,6 @@ import { NextResponse } from 'next/server'
 const isAdminRoute = createRouteMatcher(['/admin(.*)'])
 
 const isPublicRoute = createRouteMatcher([
-  "/",
   "/sign-in(.*)",
   "/sign-up(.*)",
   "/contact-us",

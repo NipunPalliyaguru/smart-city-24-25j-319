@@ -1,19 +1,16 @@
-import { UserButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
 export default async function Home() {
-  // const getUserRole = async () => {
-  //   const metaData = await currentUser();
-  //   const roleName = metaData!.publicMetadata.role;
-  //   console.log(roleName);
-  // };
+  const getUserRole = async () => {
+    const metaData = await currentUser();
+    const roleName = metaData!.publicMetadata.role;
+    return roleName;
+  };
 
-  // await getUserRole();
+  if ((await getUserRole()) === "ADMIN") {
+    redirect("/admin");
+  }
 
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
-      This is the Homepage 👋
-      <UserButton />
-    </div>
-  );
+  redirect("/dashboard");
 }

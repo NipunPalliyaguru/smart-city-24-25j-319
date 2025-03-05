@@ -30,7 +30,7 @@ import { UserData } from "@/app/(dashboard)/layout";
 const baseURL = "dashboard";
 
 // This is sample data.
-const data = {
+export const data = {
   teams: [
     {
       name: "Smart City 🏙️.",
@@ -42,16 +42,19 @@ const data = {
     {
       title: "Dashboard",
       url: "/admin",
+      breadcrumb: "dashboard",
       icon: LayoutDashboard,
     },
     {
       title: "Users",
       url: "/admin/users",
+      breadcrumb: "users",
       icon: User,
     },
     {
       title: "Settings",
       url: "/admin/settings",
+      breadcrumb: "settings",
       icon: Settings2,
     },
   ],
@@ -59,26 +62,31 @@ const data = {
     {
       title: "Dashboard",
       url: `/${baseURL}`,
+      breadcrumb: "dashboard",
       icon: LayoutDashboard,
     },
     {
       title: "Surveillance Enhancement",
       url: `/${baseURL}/surveillance-enhancement`,
+      breadcrumb: "surveillance-enhancement",
       icon: PersonStanding,
     },
     {
       title: "Waste Management",
       url: `/${baseURL}/waste-management`,
+      breadcrumb: "waste-management",
       icon: Trash,
     },
     {
       title: "Accident Detection",
       url: `/${baseURL}/accident-detection`,
+      breadcrumb: "accident-detection",
       icon: CarTaxiFront,
     },
     {
       title: "Parking Management",
       url: `/${baseURL}/parking-management`,
+      breadcrumb: "parking-management",
       icon: CircleParking,
     },
     {
